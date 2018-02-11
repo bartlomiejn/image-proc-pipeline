@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		606DA51520307912001624F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DA51420307912001624F3 /* AppDelegate.swift */; };
-		606DA51720307912001624F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DA51620307912001624F3 /* ViewController.swift */; };
-		606DA51A20307912001624F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 606DA51820307912001624F3 /* Main.storyboard */; };
+		606DA51720307912001624F3 /* VideoFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DA51620307912001624F3 /* VideoFeedViewController.swift */; };
+		606DA51A20307912001624F3 /* VideoFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 606DA51820307912001624F3 /* VideoFeed.storyboard */; };
 		606DA51C20307912001624F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 606DA51B20307912001624F3 /* Assets.xcassets */; };
 		606DA51F20307912001624F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 606DA51D20307912001624F3 /* LaunchScreen.storyboard */; };
+		606DA52C20307E6D001624F3 /* ImageProcessor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 606DA52B20307E6D001624F3 /* ImageProcessor.mm */; };
+		B25EA8A32B2D88E980ACAD2A /* Pods_barcode_detection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FCF4034B94A1C6413127AD /* Pods_barcode_detection.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24FCF4034B94A1C6413127AD /* Pods_barcode_detection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_barcode_detection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FEAF1B96ACC27AA516EB684 /* Pods-barcode-detection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-barcode-detection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-barcode-detection/Pods-barcode-detection.debug.xcconfig"; sourceTree = "<group>"; };
 		606DA51120307912001624F3 /* barcode-detection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "barcode-detection.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		606DA51420307912001624F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		606DA51620307912001624F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		606DA51920307912001624F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		606DA51620307912001624F3 /* VideoFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFeedViewController.swift; sourceTree = "<group>"; };
+		606DA51920307912001624F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/VideoFeed.storyboard; sourceTree = "<group>"; };
 		606DA51B20307912001624F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		606DA51E20307912001624F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		606DA52020307912001624F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		606DA52920307E6D001624F3 /* barcode-detection-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "barcode-detection-Bridging-Header.h"; sourceTree = "<group>"; };
+		606DA52A20307E6D001624F3 /* ImageProcessor.hh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ImageProcessor.hh; sourceTree = "<group>"; };
+		606DA52B20307E6D001624F3 /* ImageProcessor.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageProcessor.mm; sourceTree = "<group>"; };
+		9DBECEC0547F8AF14ED6FE77 /* Pods-barcode-detection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-barcode-detection.release.xcconfig"; path = "Pods/Target Support Files/Pods-barcode-detection/Pods-barcode-detection.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B25EA8A32B2D88E980ACAD2A /* Pods_barcode_detection.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		052EA292F0C40291F70288C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2FEAF1B96ACC27AA516EB684 /* Pods-barcode-detection.debug.xcconfig */,
+				9DBECEC0547F8AF14ED6FE77 /* Pods-barcode-detection.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		606DA50820307912001624F3 = {
 			isa = PBXGroup;
 			children = (
 				606DA51320307912001624F3 /* barcode-detection */,
 				606DA51220307912001624F3 /* Products */,
+				052EA292F0C40291F70288C4 /* Pods */,
+				866108CD9C20F5540D807BE9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +74,33 @@
 		606DA51320307912001624F3 /* barcode-detection */ = {
 			isa = PBXGroup;
 			children = (
+				606DA52620307E0B001624F3 /* Image Processing */,
 				606DA51420307912001624F3 /* AppDelegate.swift */,
-				606DA51620307912001624F3 /* ViewController.swift */,
-				606DA51820307912001624F3 /* Main.storyboard */,
+				606DA51620307912001624F3 /* VideoFeedViewController.swift */,
+				606DA52920307E6D001624F3 /* barcode-detection-Bridging-Header.h */,
+				606DA51820307912001624F3 /* VideoFeed.storyboard */,
 				606DA51B20307912001624F3 /* Assets.xcassets */,
 				606DA51D20307912001624F3 /* LaunchScreen.storyboard */,
 				606DA52020307912001624F3 /* Info.plist */,
 			);
 			path = "barcode-detection";
+			sourceTree = "<group>";
+		};
+		606DA52620307E0B001624F3 /* Image Processing */ = {
+			isa = PBXGroup;
+			children = (
+				606DA52A20307E6D001624F3 /* ImageProcessor.hh */,
+				606DA52B20307E6D001624F3 /* ImageProcessor.mm */,
+			);
+			path = "Image Processing";
+			sourceTree = "<group>";
+		};
+		866108CD9C20F5540D807BE9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24FCF4034B94A1C6413127AD /* Pods_barcode_detection.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 606DA52320307912001624F3 /* Build configuration list for PBXNativeTarget "barcode-detection" */;
 			buildPhases = (
+				7988910FF243937D1506D261 /* [CP] Check Pods Manifest.lock */,
 				606DA50D20307912001624F3 /* Sources */,
 				606DA50E20307912001624F3 /* Frameworks */,
 				606DA50F20307912001624F3 /* Resources */,
+				F67F22E790C192AD2A19592F /* [CP] Embed Pods Frameworks */,
+				51C46D838A1290C9CAA2796C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +138,7 @@
 				TargetAttributes = {
 					606DA51020307912001624F3 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -125,18 +168,70 @@
 			files = (
 				606DA51F20307912001624F3 /* LaunchScreen.storyboard in Resources */,
 				606DA51C20307912001624F3 /* Assets.xcassets in Resources */,
-				606DA51A20307912001624F3 /* Main.storyboard in Resources */,
+				606DA51A20307912001624F3 /* VideoFeed.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51C46D838A1290C9CAA2796C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-barcode-detection/Pods-barcode-detection-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7988910FF243937D1506D261 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-barcode-detection-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F67F22E790C192AD2A19592F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-barcode-detection/Pods-barcode-detection-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		606DA50D20307912001624F3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				606DA51720307912001624F3 /* ViewController.swift in Sources */,
+				606DA52C20307E6D001624F3 /* ImageProcessor.mm in Sources */,
+				606DA51720307912001624F3 /* VideoFeedViewController.swift in Sources */,
 				606DA51520307912001624F3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,12 +239,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		606DA51820307912001624F3 /* Main.storyboard */ = {
+		606DA51820307912001624F3 /* VideoFeed.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				606DA51920307912001624F3 /* Base */,
 			);
-			name = Main.storyboard;
+			name = VideoFeed.storyboard;
 			sourceTree = "<group>";
 		};
 		606DA51D20307912001624F3 /* LaunchScreen.storyboard */ = {
@@ -272,31 +367,38 @@
 		};
 		606DA52420307912001624F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FEAF1B96ACC27AA516EB684 /* Pods-barcode-detection.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6NDM93MJT;
 				INFOPLIST_FILE = "barcode-detection/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.bartlomiejnowak.barcode-detection";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "barcode-detection/barcode-detection-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		606DA52520307912001624F3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DBECEC0547F8AF14ED6FE77 /* Pods-barcode-detection.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6NDM93MJT;
 				INFOPLIST_FILE = "barcode-detection/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.bartlomiejnowak.barcode-detection";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "barcode-detection/barcode-detection-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
