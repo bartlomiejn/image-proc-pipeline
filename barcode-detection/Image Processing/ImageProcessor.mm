@@ -52,12 +52,16 @@ using namespace cv;
     erode(morphed, eroded, defaultKernel, anchor, iters);
     dilate(eroded, dilated, defaultKernel, anchor, iters);
     
-    // Contours for the barcode
+    // Contours for the biggest blob (presumably our barcode)
     
     Mat cpy = dilated;
     std::vector<std::vector<cv::Point>> contours;
     std::vector<Vec4i> hierarchy;
     findContours(cpy, contours, hierarchy, RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);
+    
+    if (contours.size() == 0) {
+        return nil;
+    }
     
     std::sort(contours.begin(),
               contours.end(),
@@ -65,12 +69,24 @@ using namespace cv;
                   return contourArea(p_vec1) > contourArea(p_vec2);
               });
     
-    Mat contoursMat = Mat::zeros(dilated.rows, dilated.cols, CV_8UC3);
+    // Compute the rotated bounding box of the biggest blob
+    
+    cv::Mat boundingPts;
+    cv::RotatedRect boundingRect = minAreaRect(contours[0]);
+    boxPoints(boundingRect, boundingPts);
+    
+    Mat bBoxContours = Mat::zeros(dilated.rows, dilated.cols, CV_8UC3);
     cv::RNG rng;
     Scalar colour = cv::Scalar(rng.uniform(0, 255), rng.uniform(0, 255), rng.uniform(0, 255));
-    drawContours(contoursMat, contours, 0, colour);
     
-    return [self imageFromMat:contoursMat orientation:UIImageOrientationUp];
+    Point2f pts[4];
+    boundingRect.points(pts);
+    line(bBoxContours, pts[0], pts[1], colour);
+    line(bBoxContours, pts[1], pts[2], colour);
+    line(bBoxContours, pts[2], pts[3], colour);
+    line(bBoxContours, pts[3], pts[0], colour);
+    
+    return [self imageFromMat:bBoxContours orientation:UIImageOrientationUp];
 }
 
 - (instancetype)init {
