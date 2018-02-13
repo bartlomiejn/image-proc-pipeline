@@ -12,6 +12,6 @@
 
 @interface ImageProcessor : NSObject
 - (instancetype _Nonnull)init;
-- (UIImage* _Nullable)detectBarcodesFromBGRA32SampleBuffer:(CMSampleBufferRef* _Nonnull)buffer;
-- (UIImage* _Nullable)barcodeFromImage:(UIImage* _Nonnull)image;
+- (UIImage* _Nullable)detectBarcodesFromBGRA32SampleBuffer:(CMSampleBufferRef _Nonnull)buffer;
 @end
+

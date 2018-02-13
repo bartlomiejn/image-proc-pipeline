@@ -6,7 +6,7 @@
 //  Copyright © 2018 Bartłomiej Nowak. All rights reserved.
 //
 
-#import "ImageProcessor.hh"
+#import "ImageProcessor.h"
 #import <opencv2/opencv.hpp>
 
 using namespace cv;
@@ -16,17 +16,39 @@ using namespace cv;
 
 @implementation ImageProcessor
 
-- (UIImage* _Nullable)detectBarcodesFromBGRA32SampleBuffer:(CMSampleBufferRef* _Nonnull)buffer {
-    
-    
-    return nil;
+- (instancetype)init {
+    self = [super init];
+    if (self) {}
+    return self;
 }
 
-- (UIImage* _Nullable)barcodeFromImage:(UIImage* _Nonnull)image {
-    Mat mat = [self matFromImage:image];
+- (UIImage* _Nullable)detectBarcodesFromBGRA32SampleBuffer:(CMSampleBufferRef _Nonnull)buffer {
+    CVImageBufferRef buf = CMSampleBufferGetImageBuffer(buffer);
     
+    CVPixelBufferLockBaseAddress(buf, 0);
+    
+    int width = (int)CVPixelBufferGetWidth(buf);
+    int height = (int)CVPixelBufferGetHeight(buf);
+    
+    // https://gist.github.com/jebai/8108287#gistcomment-2160895
+    // One suggestion, based on my experience using this: some iPhone device video streams have padding at the end of
+    // each pixelBuffer row, which will result in corrupted images if the Mat auto-calculates the step size. To fix it,
+    // manually set the 5th 'step' argument to cv::Mat to CVPixelBufferGetBytesPerRow(pixelBuffer).
+    
+    Mat mat = cv::Mat(height,
+                      width,
+                      CV_8UC4,
+                      (unsigned char *)CVPixelBufferGetBaseAddress(buf),
+                      CVPixelBufferGetBytesPerRow(buf));
+    
+    CVPixelBufferUnlockBaseAddress(buf, 0);
+
+    return [self barcodeFromMat:mat];
+}
+
+- (UIImage* _Nullable)barcodeFromMat:(cv::Mat)mat {
     Mat grayscale_mat;
-    cvtColor(mat, grayscale_mat, CV_RGBA2GRAY);
+    cvtColor(mat, grayscale_mat, CV_BGRA2GRAY);
     
     // Gradient magnitude generation using Scharr operator
     
@@ -94,12 +116,6 @@ using namespace cv;
     return [self imageFromMat:mat orientation:UIImageOrientationUp];
 }
 
-- (instancetype)init {
-    self = [super init];
-    if (self) {}
-    return self;
-}
-
 - (Mat)matFromImage:(UIImage *)image {
     CGColorSpaceRef colorSpace = CGImageGetColorSpace(image.CGImage);
     
@@ -125,19 +141,20 @@ using namespace cv;
 }
 
 - (UIImage *)imageFromMat:(Mat)mat orientation:(UIImageOrientation)orientation {
-    NSData *data = [NSData dataWithBytes: mat.data length: mat.elemSize() * mat.total()];
+    cv::Mat cvtedMat;
+    cvtColor(mat, cvtedMat, CV_BGRA2RGB);
     
-    CGColorSpaceRef colorSpace = mat.elemSize() == 1 ? CGColorSpaceCreateDeviceGray() : CGColorSpaceCreateDeviceRGB();
+    NSData *data = [NSData dataWithBytes: cvtedMat.data length: cvtedMat.elemSize() * cvtedMat.total()];
+    
+    CGColorSpaceRef colorSpace = cvtedMat.elemSize() == 1 ? CGColorSpaceCreateDeviceGray() : CGColorSpaceCreateDeviceRGB();
+    
     CGDataProviderRef provider = CGDataProviderCreateWithCFData((__bridge CFDataRef)data);
     
-    int cols = mat.cols;
-    int rows = mat.rows;
-    
-    CGImageRef imageRef = CGImageCreate(cols,
-                                        rows,
+    CGImageRef imageRef = CGImageCreate(cvtedMat.cols,
+                                        cvtedMat.rows,
                                         8,                                          // Bits per component
-                                        8 * mat.elemSize(),                         // Bits per pixel
-                                        mat.step[0],                                // Bytes per row
+                                        8 * cvtedMat.elemSize(),                         // Bits per pixel
+                                        cvtedMat.step[0],                                // Bytes per row
                                         colorSpace,
                                         kCGImageAlphaNone | kCGBitmapByteOrderDefault,
                                         provider,

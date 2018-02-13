@@ -29,7 +29,7 @@
 		606DA51E20307912001624F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		606DA52020307912001624F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		606DA52920307E6D001624F3 /* barcode-detection-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "barcode-detection-Bridging-Header.h"; sourceTree = "<group>"; };
-		606DA52A20307E6D001624F3 /* ImageProcessor.hh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ImageProcessor.hh; sourceTree = "<group>"; };
+		606DA52A20307E6D001624F3 /* ImageProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageProcessor.h; sourceTree = "<group>"; };
 		606DA52B20307E6D001624F3 /* ImageProcessor.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageProcessor.mm; sourceTree = "<group>"; };
 		9DBECEC0547F8AF14ED6FE77 /* Pods-barcode-detection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-barcode-detection.release.xcconfig"; path = "Pods/Target Support Files/Pods-barcode-detection/Pods-barcode-detection.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,7 +100,7 @@
 		606DA52620307E0B001624F3 /* Image Processing */ = {
 			isa = PBXGroup;
 			children = (
-				606DA52A20307E6D001624F3 /* ImageProcessor.hh */,
+				606DA52A20307E6D001624F3 /* ImageProcessor.h */,
 				606DA52B20307E6D001624F3 /* ImageProcessor.mm */,
 			);
 			path = "Image Processing";

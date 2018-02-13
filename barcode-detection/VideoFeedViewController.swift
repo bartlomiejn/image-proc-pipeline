@@ -15,11 +15,12 @@ class VideoFeedViewController: UIViewController {
     @IBOutlet private weak var imageView2: UIImageView!
     
     private let videoSource = VideoSource()
-    private let processor = ImageProcessor()
+    fileprivate let processor = ImageProcessor()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        videoSource.delegate = self
         videoSource.setup(withPixelFormat: .bgra32)
     }
     
@@ -36,10 +37,14 @@ class VideoFeedViewController: UIViewController {
     }
 }
 
-extension VideoSourceDelegate {
+extension VideoFeedViewController: VideoSourceDelegate {
     
     func videoSourceDidOutputFrame(withBuffer sampleBuffer: CMSampleBuffer, pixelFormat: PixelFormat) {
-        process
+        let image = processor.detectBarcodes(fromBGRA32SampleBuffer: sampleBuffer)
+        
+        DispatchQueue.main.async { [weak imageView2] in
+            imageView2?.image = image
+        }
     }
     
     func videoSourceDidEncounterError(_ error: Error) {
