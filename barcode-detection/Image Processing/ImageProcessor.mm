@@ -16,6 +16,12 @@ using namespace cv;
 
 @implementation ImageProcessor
 
+- (UIImage* _Nullable)detectBarcodesFromBGRA32SampleBuffer:(CMSampleBufferRef* _Nonnull)buffer {
+    
+    
+    return nil;
+}
+
 - (UIImage* _Nullable)barcodeFromImage:(UIImage* _Nonnull)image {
     Mat mat = [self matFromImage:image];
     
@@ -54,10 +60,9 @@ using namespace cv;
     
     // Contours for the biggest blob (presumably our barcode)
     
-    Mat cpy = dilated;
     std::vector<std::vector<cv::Point>> contours;
     std::vector<Vec4i> hierarchy;
-    findContours(cpy, contours, hierarchy, RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);
+    findContours(dilated, contours, hierarchy, RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);
     
     if (contours.size() == 0) {
         return nil;
@@ -81,12 +86,12 @@ using namespace cv;
     
     Point2f pts[4];
     boundingRect.points(pts);
-    line(bBoxContours, pts[0], pts[1], colour);
-    line(bBoxContours, pts[1], pts[2], colour);
-    line(bBoxContours, pts[2], pts[3], colour);
-    line(bBoxContours, pts[3], pts[0], colour);
+    line(mat, pts[0], pts[1], colour);
+    line(mat, pts[1], pts[2], colour);
+    line(mat, pts[2], pts[3], colour);
+    line(mat, pts[3], pts[0], colour);
     
-    return [self imageFromMat:bBoxContours orientation:UIImageOrientationUp];
+    return [self imageFromMat:mat orientation:UIImageOrientationUp];
 }
 
 - (instancetype)init {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60181D402033494700CD252A /* VideoSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60181D3F2033494700CD252A /* VideoSource.swift */; };
 		606DA51520307912001624F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DA51420307912001624F3 /* AppDelegate.swift */; };
 		606DA51720307912001624F3 /* VideoFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DA51620307912001624F3 /* VideoFeedViewController.swift */; };
 		606DA51A20307912001624F3 /* VideoFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 606DA51820307912001624F3 /* VideoFeed.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		24FCF4034B94A1C6413127AD /* Pods_barcode_detection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_barcode_detection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FEAF1B96ACC27AA516EB684 /* Pods-barcode-detection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-barcode-detection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-barcode-detection/Pods-barcode-detection.debug.xcconfig"; sourceTree = "<group>"; };
+		60181D3F2033494700CD252A /* VideoSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSource.swift; sourceTree = "<group>"; };
 		606DA51120307912001624F3 /* barcode-detection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "barcode-detection.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		606DA51420307912001624F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		606DA51620307912001624F3 /* VideoFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFeedViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		60181D3B2033482F00CD252A /* Video Source */ = {
+			isa = PBXGroup;
+			children = (
+				60181D3F2033494700CD252A /* VideoSource.swift */,
+			);
+			path = "Video Source";
+			sourceTree = "<group>";
+		};
 		606DA50820307912001624F3 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +84,7 @@
 		606DA51320307912001624F3 /* barcode-detection */ = {
 			isa = PBXGroup;
 			children = (
+				60181D3B2033482F00CD252A /* Video Source */,
 				606DA52620307E0B001624F3 /* Image Processing */,
 				606DA51420307912001624F3 /* AppDelegate.swift */,
 				606DA51620307912001624F3 /* VideoFeedViewController.swift */,
@@ -230,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60181D402033494700CD252A /* VideoSource.swift in Sources */,
 				606DA52C20307E6D001624F3 /* ImageProcessor.mm in Sources */,
 				606DA51720307912001624F3 /* VideoFeedViewController.swift in Sources */,
 				606DA51520307912001624F3 /* AppDelegate.swift in Sources */,

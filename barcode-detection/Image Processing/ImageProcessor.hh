@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface ImageProcessor : NSObject
 - (instancetype _Nonnull)init;
+- (UIImage* _Nullable)detectBarcodesFromBGRA32SampleBuffer:(CMSampleBufferRef* _Nonnull)buffer;
 - (UIImage* _Nullable)barcodeFromImage:(UIImage* _Nonnull)image;
 @end
