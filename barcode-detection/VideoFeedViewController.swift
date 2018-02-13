@@ -12,7 +12,6 @@ import AVFoundation
 class VideoFeedViewController: UIViewController {
 
     @IBOutlet private weak var imageView: UIImageView!
-    @IBOutlet private weak var imageView2: UIImageView!
     
     private let videoSource = VideoSource()
     fileprivate let processor = ImageProcessor()
@@ -40,10 +39,12 @@ class VideoFeedViewController: UIViewController {
 extension VideoFeedViewController: VideoSourceDelegate {
     
     func videoSourceDidOutputFrame(withBuffer sampleBuffer: CMSampleBuffer, pixelFormat: PixelFormat) {
-        let image = processor.detectBarcodes(fromBGRA32SampleBuffer: sampleBuffer)
+        guard let image = processor.detectBarcodes(fromBGRA32SampleBuffer: sampleBuffer) else {
+            return
+        }
         
-        DispatchQueue.main.async { [weak imageView2] in
-            imageView2?.image = image
+        DispatchQueue.main.async { [weak imageView] in
+            imageView?.image = image
         }
     }
     
