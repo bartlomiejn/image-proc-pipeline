@@ -11,10 +11,11 @@ import AVFoundation
 
 class VideoFeedViewController: UIViewController {
 
-    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var metalView: MetalView!
     
-    private let videoSource = VideoSource()
-    fileprivate let processor = ImageProcessor()
+    private let videoSource = AVVideoSource()
+    private let processor = ImageProcessor()
+    private lazy var converter = MatMetalTextureConverter(processor: processor)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,16 +37,17 @@ class VideoFeedViewController: UIViewController {
     }
 }
 
-extension VideoFeedViewController: VideoSourceDelegate {
+extension VideoFeedViewController: AVVideoSourceDelegate {
     
     func videoSourceDidOutputFrame(withBuffer sampleBuffer: CMSampleBuffer, pixelFormat: PixelFormat) {
-        guard let image = processor.detectBarcodes(fromBGRA32SampleBuffer: sampleBuffer) else {
-            return
-        }
-        
-        DispatchQueue.main.async { [weak imageView] in
-            imageView?.image = image
-        }
+        processor.processBuffer(sampleBuffer)
+//        guard let image = processor.process else {
+//            return
+//        }
+//
+//        DispatchQueue.main.async { [weak imageView] in
+//            imageView?.image = image
+//        }
     }
     
     func videoSourceDidEncounterError(_ error: Error) {

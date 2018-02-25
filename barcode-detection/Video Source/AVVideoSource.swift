@@ -22,18 +22,18 @@ enum PixelFormat {
     }
 }
 
-protocol VideoSourceDelegate: class {
+protocol AVVideoSourceDelegate: class {
     func videoSourceDidOutputFrame(withBuffer sampleBuffer: CMSampleBuffer, pixelFormat: PixelFormat)
     func videoSourceDidEncounterError(_ error: Error)
 }
 
-final class VideoSource: NSObject {
+final class AVVideoSource: NSObject {
     
     struct BufferRetrievalFailure: Error {}
     struct InsufficientVideoAuthorization: Error {}
     struct SessionInitializationFailure: Error {}
     
-    weak var delegate: VideoSourceDelegate?
+    weak var delegate: AVVideoSourceDelegate?
     
     private let session = AVCaptureSession()
     private var discoverySession = AVCaptureDevice.DiscoverySession(
@@ -136,7 +136,7 @@ final class VideoSource: NSObject {
     }
 }
 
-extension VideoSource: AVCaptureVideoDataOutputSampleBufferDelegate {
+extension AVVideoSource: AVCaptureVideoDataOutputSampleBufferDelegate {
     
     func captureOutput(
         _ output: AVCaptureOutput,

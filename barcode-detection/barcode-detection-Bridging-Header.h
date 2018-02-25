@@ -3,3 +3,4 @@
 //
 
 #import "ImageProcessor.h"
+#import "MatMetalTextureConverter.h"

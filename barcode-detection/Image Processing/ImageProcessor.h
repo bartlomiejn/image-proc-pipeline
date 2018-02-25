@@ -10,8 +10,18 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
+#ifdef __cplusplus
+#import <opencv2/opencv.hpp>
+#endif
+
 @interface ImageProcessor : NSObject
+
+#ifdef __cplusplus
+@property (nonatomic, copy) void (^onMatReady)(cv::Mat);
+#endif
+
 - (instancetype _Nonnull)init;
-- (UIImage* _Nullable)detectBarcodesFromBGRA32SampleBuffer:(CMSampleBufferRef _Nonnull)buffer;
+- (void)processBuffer:(CMSampleBufferRef _Nonnull)buffer;
+
 @end
 

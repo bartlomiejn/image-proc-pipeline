@@ -22,6 +22,10 @@ using namespace cv;
     return self;
 }
 
+- (void)processBuffer:(CMSampleBufferRef _Nonnull)buffer {
+    
+}
+
 - (UIImage* _Nullable)detectBarcodesFromBGRA32SampleBuffer:(CMSampleBufferRef _Nonnull)buffer {
     CVImageBufferRef buf = CMSampleBufferGetImageBuffer(buffer);
     
