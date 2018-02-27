@@ -23,10 +23,14 @@ using namespace cv;
 }
 
 - (void)processBuffer:(CMSampleBufferRef _Nonnull)buffer {
+    cv::Mat mat = [self matFromBuffer:buffer];
     
+    if ([self onMatReady]) {
+        [self onMatReady](mat);
+    }
 }
 
-- (UIImage* _Nullable)detectBarcodesFromBGRA32SampleBuffer:(CMSampleBufferRef _Nonnull)buffer {
+- (cv::Mat)matFromBuffer:(CMSampleBufferRef _Nonnull)buffer {
     CVImageBufferRef buf = CMSampleBufferGetImageBuffer(buffer);
     
     CVPixelBufferLockBaseAddress(buf, 0);
@@ -38,6 +42,8 @@ using namespace cv;
     // One suggestion, based on my experience using this: some iPhone device video streams have padding at the end of
     // each pixelBuffer row, which will result in corrupted images if the Mat auto-calculates the step size. To fix it,
     // manually set the 5th 'step' argument to cv::Mat to CVPixelBufferGetBytesPerRow(pixelBuffer).
+    //
+    // e.g. a 1920x1080 frame with 4bpp will have 4352 bytesPerRow instead of 4320
     
     Mat mat = cv::Mat(height,
                       width,
@@ -46,13 +52,13 @@ using namespace cv;
                       CVPixelBufferGetBytesPerRow(buf));
     
     CVPixelBufferUnlockBaseAddress(buf, 0);
-
-    return [self barcodeFromMat:mat];
+    
+    return mat;
 }
 
 - (UIImage* _Nullable)barcodeFromMat:(cv::Mat)mat {
     Mat grayscale_mat;
-    cvtColor(mat, grayscale_mat, CV_BGRA2GRAY);
+    cvtColor(mat, grayscale_mat, CV_RGBA2GRAY);
     
     // Gradient magnitude generation using Scharr operator
     

@@ -24,11 +24,6 @@ final class MetalView: UIView {
         }
     }
     
-    enum PreviewType {
-        case video
-        case photo
-    }
-    
     private let metalView: MTKView
     
     private var device: MTLDevice

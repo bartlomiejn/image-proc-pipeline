@@ -10,6 +10,7 @@
 
 #import <Foundation/Foundation.h>
 #import <MetalKit/MetalKit.h>
+#import <Metal/Metal.h>
 
 #ifdef __cplusplus
 #import <opencv2/opencv.hpp>
@@ -17,12 +18,8 @@
 
 @interface MatMetalTextureConverter : NSObject
 
-@property (nonatomic, copy) void (^onTextureReady)(id<MTLTexture> _Nonnull);
+@property (nonatomic, copy) void (^ _Nullable onTextureReady)(id<MTLTexture> _Nonnull);
 
-- (instancetype _Nonnull)initWithProcessor:(ImageProcessor* _Nonnull)processor;
-
-#ifdef __cplusplus
--(void)convert:(cv::Mat)mat;
-#endif
+- (instancetype _Nonnull)initWithProcessor:(ImageProcessor* _Nonnull)processor device:(id<MTLDevice> _Nonnull)device;
 
 @end

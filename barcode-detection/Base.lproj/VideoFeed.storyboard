@@ -17,24 +17,9 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v2M-AK-4kj" customClass="MetalView" customModule="barcode_detection" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="v2M-AK-4kj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3pb-UM-0cf"/>
-                            <constraint firstAttribute="bottom" secondItem="v2M-AK-4kj" secondAttribute="bottom" id="gyP-NM-877"/>
-                            <constraint firstItem="v2M-AK-4kj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pL8-7B-zJV"/>
-                            <constraint firstAttribute="trailing" secondItem="v2M-AK-4kj" secondAttribute="trailing" id="zAg-DT-J7A"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="metalView" destination="v2M-AK-4kj" id="UMO-UA-ATM"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

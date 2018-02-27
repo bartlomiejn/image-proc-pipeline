@@ -8,17 +8,33 @@
 
 import UIKit
 import AVFoundation
+import Metal
 
 class VideoFeedViewController: UIViewController {
 
-    @IBOutlet private weak var metalView: MetalView!
+    private lazy var metalView = MetalView(device: device)
     
     private let videoSource = AVVideoSource()
     private let processor = ImageProcessor()
-    private lazy var converter = MatMetalTextureConverter(processor: processor)
+    private lazy var converter = MatMetalTextureConverter(processor: processor, device: device)
+    
+    private let device = MTLCreateSystemDefaultDevice()!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.addSubview(metalView)
+        metalView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            view.topAnchor.constraint(equalTo: metalView.topAnchor),
+            view.leadingAnchor.constraint(equalTo: metalView.leadingAnchor),
+            view.bottomAnchor.constraint(equalTo: metalView.bottomAnchor),
+            view.trailingAnchor.constraint(equalTo: metalView.trailingAnchor)
+        ])
+        
+        converter.onTextureReady = { [weak self] texture in
+            self?.metalView.set(texture)
+        }
         
         videoSource.delegate = self
         videoSource.setup(withPixelFormat: .bgra32)
@@ -41,13 +57,6 @@ extension VideoFeedViewController: AVVideoSourceDelegate {
     
     func videoSourceDidOutputFrame(withBuffer sampleBuffer: CMSampleBuffer, pixelFormat: PixelFormat) {
         processor.processBuffer(sampleBuffer)
-//        guard let image = processor.process else {
-//            return
-//        }
-//
-//        DispatchQueue.main.async { [weak imageView] in
-//            imageView?.image = image
-//        }
     }
     
     func videoSourceDidEncounterError(_ error: Error) {

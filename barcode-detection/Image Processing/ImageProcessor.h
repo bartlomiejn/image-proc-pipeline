@@ -17,7 +17,7 @@
 @interface ImageProcessor : NSObject
 
 #ifdef __cplusplus
-@property (nonatomic, copy) void (^onMatReady)(cv::Mat);
+@property (nonatomic, copy) void (^ _Nullable onMatReady)(cv::Mat);
 #endif
 
 - (instancetype _Nonnull)init;

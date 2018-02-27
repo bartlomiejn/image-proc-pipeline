@@ -9,15 +9,39 @@
 import AVFoundation
 
 enum PixelFormat {
+    
     case bgra32
     case yCbCrBiPlanar420
+    case yCbCrBiPlanar420FullRange
     
+    /**
+     Returns the CV type that corresponds to the enum case.
+     
+     kCVPixelFormatType are decimal numbers, which when converted to hex and then to ASCII give meaningful values, e.g.
+     
+     `kCVPixelFormatType_32BGRA` -> `BGRA`
+     
+     `kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange` -> `420v`
+     
+     `kCVPixelFormatType_420YpCbCr8BiPlanarFullRange` -> `420f`
+     
+     These are the three values that are available on an iPhone 8+ which i'm using for testing purposes. According to
+     SO link below, these 3 were also available on 4S so all of them should be always available.
+    */
     var coreVideoType: OSType {
         switch self {
             case .bgra32:
                 return kCVPixelFormatType_32BGRA
             case .yCbCrBiPlanar420:
+                // https://stackoverflow.com/questions/10126776/difference-between-full-range-420f-and-video-range-420v-for-ycrcb-pixel-form
+                //
+                // Video range means that the Y component only uses the byte values from 16 to 235 (for some historical
+                // reasons). Full range uses the full range of a byte, namely 0 to 255.
+                //
+                // The chroma components (Cb, Cr) always use full range.
                 return kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange
+            case .yCbCrBiPlanar420FullRange:
+                return kCVPixelFormatType_420YpCbCr8BiPlanarFullRange
         }
     }
 }
@@ -127,7 +151,7 @@ final class AVVideoSource: NSObject {
         }
         
         videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videosource.output"))
-        videoOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey as String: Int(pixelFormat.coreVideoType)]
+        videoOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey as String : Int(pixelFormat.coreVideoType)]
         videoOutput.alwaysDiscardsLateVideoFrames = true
         
         session.addOutput(videoOutput)
