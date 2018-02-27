@@ -19,6 +19,7 @@
 		60CF9A712045D7D80099A2F5 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CF9A702045D7D70099A2F5 /* CoreVideo.framework */; };
 		60CF9A742045DBA50099A2F5 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CF9A722045DBA50099A2F5 /* Metal.framework */; };
 		60CF9A752045DBA50099A2F5 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CF9A732045DBA50099A2F5 /* MetalKit.framework */; };
+		60CF9A772045FF930099A2F5 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 60CF9A762045FF930099A2F5 /* Shaders.metal */; };
 		B25EA8A32B2D88E980ACAD2A /* Pods_barcode_detection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FCF4034B94A1C6413127AD /* Pods_barcode_detection.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		60CF9A702045D7D70099A2F5 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		60CF9A722045DBA50099A2F5 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		60CF9A732045DBA50099A2F5 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		60CF9A762045FF930099A2F5 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		9DBECEC0547F8AF14ED6FE77 /* Pods-barcode-detection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-barcode-detection.release.xcconfig"; path = "Pods/Target Support Files/Pods-barcode-detection/Pods-barcode-detection.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +127,7 @@
 		60CF9A6820433D330099A2F5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				60CF9A762045FF930099A2F5 /* Shaders.metal */,
 				60CF9A6920433D450099A2F5 /* MetalView.swift */,
 			);
 			path = View;
@@ -278,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60181D402033494700CD252A /* AVVideoSource.swift in Sources */,
+				60CF9A772045FF930099A2F5 /* Shaders.metal in Sources */,
 				60CF9A6A20433D450099A2F5 /* MetalView.swift in Sources */,
 				606DA52C20307E6D001624F3 /* ImageProcessor.mm in Sources */,
 				60CF9A6D20433DF20099A2F5 /* MatMetalTextureConverter.mm in Sources */,

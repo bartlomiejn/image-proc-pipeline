@@ -66,7 +66,7 @@ using namespace cv;
     
     id<MTLTexture> texture;
     
-    MTLTextureDescriptor *descriptor = [MTLTextureDescriptor texture2DDescriptorWithPixelFormat:MTLPixelFormatRGBA32Uint
+    MTLTextureDescriptor *descriptor = [MTLTextureDescriptor texture2DDescriptorWithPixelFormat:MTLPixelFormatBGRA8Unorm
                                                                                           width:imageCols
                                                                                          height:imageRows
                                                                                       mipmapped:NO];
