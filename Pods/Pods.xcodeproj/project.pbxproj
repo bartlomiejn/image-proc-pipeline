@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1BB453ED680DF961AC41083FF9A1544B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		47C819AAE62848F305A6E682683E72A2 /* Pods-barcode-detection-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0EFAD8A05E8DE870022403796CFF80 /* Pods-barcode-detection-dummy.m */; };
-		70E3E4FC2214971438D188848B015E51 /* Pods-barcode-detection-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 00BFB64A4672D2A707EDA9A738EC94B5 /* Pods-barcode-detection-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1CE56B1C00310BE3D818368EBD826E2D /* Pods-opencv-metal-pipeline-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 679BF43EADCD45F26BA7528DBA02284F /* Pods-opencv-metal-pipeline-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55448F7E7532C00CE557F2E95D7BB452 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		AE2FB56C84160FD25DD9B412EE01507C /* Pods-opencv-metal-pipeline-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876FBB7DD01C0EC7B749A49958EED51 /* Pods-opencv-metal-pipeline-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		00BFB64A4672D2A707EDA9A738EC94B5 /* Pods-barcode-detection-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-barcode-detection-umbrella.h"; sourceTree = "<group>"; };
+		00C449E0C68B8FF54345855CBE170F74 /* Pods-opencv-metal-pipeline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-opencv-metal-pipeline.release.xcconfig"; sourceTree = "<group>"; };
 		03A1F53D76874A2A10FF5623D9DEBF88 /* seam_finders.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = seam_finders.hpp; path = opencv2.framework/Versions/A/Headers/stitching/detail/seam_finders.hpp; sourceTree = "<group>"; };
 		064DFC2860C6706B07124748974641DD /* features2d.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = features2d.hpp; path = opencv2.framework/Versions/A/Headers/features2d/features2d.hpp; sourceTree = "<group>"; };
 		0683A5D589DCD4807B59EAC82DAF7EBA /* types_c.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = types_c.h; path = opencv2.framework/Versions/A/Headers/core/types_c.h; sourceTree = "<group>"; };
@@ -26,11 +26,11 @@
 		124CF07572EC9045B727F93C016AC84D /* blenders.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = blenders.hpp; path = opencv2.framework/Versions/A/Headers/stitching/detail/blenders.hpp; sourceTree = "<group>"; };
 		1294B1A4F6F200354039B69F8721CBC3 /* cuda_types.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = cuda_types.hpp; path = opencv2.framework/Versions/A/Headers/core/cuda_types.hpp; sourceTree = "<group>"; };
 		14A7CBB5272AD24771DD7A77280AFD42 /* params.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = params.h; path = opencv2.framework/Versions/A/Headers/flann/params.h; sourceTree = "<group>"; };
+		1876FBB7DD01C0EC7B749A49958EED51 /* Pods-opencv-metal-pipeline-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-opencv-metal-pipeline-dummy.m"; sourceTree = "<group>"; };
 		18A567B3338A10921A9B506D9CC9C6B6 /* cvdef.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cvdef.h; path = opencv2.framework/Versions/A/Headers/core/cvdef.h; sourceTree = "<group>"; };
 		1AC41B2E316689AB8B1E04BF456F7145 /* imgproc.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = imgproc.hpp; path = opencv2.framework/Versions/A/Headers/imgproc.hpp; sourceTree = "<group>"; };
 		1BEDDB9FE81AFE9F52600A0731E4794E /* result_set.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = result_set.h; path = opencv2.framework/Versions/A/Headers/flann/result_set.h; sourceTree = "<group>"; };
 		1C57B47AB75385B8416D6FFA468D39F3 /* private.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = private.hpp; path = opencv2.framework/Versions/A/Headers/core/private.hpp; sourceTree = "<group>"; };
-		1DF373053A240B2383617C13FEE44455 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2010A23A0C17B8ED505F6816C8D7064B /* video.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = video.hpp; path = opencv2.framework/Versions/A/Headers/video.hpp; sourceTree = "<group>"; };
 		205DBC99F33A80BE36FA4FA738C13787 /* interface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = interface.h; path = opencv2.framework/Versions/A/Headers/core/hal/interface.h; sourceTree = "<group>"; };
 		211E4751911DBC09C43D0007D7484001 /* flann.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = flann.hpp; path = opencv2.framework/Versions/A/Headers/flann/flann.hpp; sourceTree = "<group>"; };
@@ -45,13 +45,11 @@
 		34554CDA3F1FE4EF80F0408CD4494A13 /* wimage.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = wimage.hpp; path = opencv2.framework/Versions/A/Headers/core/wimage.hpp; sourceTree = "<group>"; };
 		34F53B47DDBF6867DE2EC4F092649172 /* hist_cost.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = hist_cost.hpp; path = opencv2.framework/Versions/A/Headers/shape/hist_cost.hpp; sourceTree = "<group>"; };
 		356B7194DE8DC12DCA19C3368FFBAB05 /* operations.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = operations.hpp; path = opencv2.framework/Versions/A/Headers/core/operations.hpp; sourceTree = "<group>"; };
-		397D5F4DAFAA141F3CC7F2C2097D88AB /* Pods-barcode-detection-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-barcode-detection-acknowledgements.plist"; sourceTree = "<group>"; };
 		3C2A5021AB6C0D57A480DBB0EAF62C1E /* cvstd.inl.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = cvstd.inl.hpp; path = opencv2.framework/Versions/A/Headers/core/cvstd.inl.hpp; sourceTree = "<group>"; };
 		3E7A585A531BB0C9F9210FFCAF1BB005 /* ground_truth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ground_truth.h; path = opencv2.framework/Versions/A/Headers/flann/ground_truth.h; sourceTree = "<group>"; };
 		3E9A4E44CC5FB16013EFF4A0B6225BBE /* autotuned_index.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = autotuned_index.h; path = opencv2.framework/Versions/A/Headers/flann/autotuned_index.h; sourceTree = "<group>"; };
 		3F6FC33D49EC9B70D79C0783263C59B7 /* tracking_c.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tracking_c.h; path = opencv2.framework/Versions/A/Headers/video/tracking_c.h; sourceTree = "<group>"; };
 		408499CE89C276A3032DB52EC97372AB /* objdetect.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = objdetect.hpp; path = opencv2.framework/Versions/A/Headers/objdetect/objdetect.hpp; sourceTree = "<group>"; };
-		415065639C4CD5A257A029F2DD5248A9 /* Pods_barcode_detection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_barcode_detection.framework; path = "Pods-barcode-detection.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41E8688E8763FCCAEA40390D0B46EC45 /* warpers.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = warpers.hpp; path = opencv2.framework/Versions/A/Headers/stitching/warpers.hpp; sourceTree = "<group>"; };
 		42A4BF00CAB3FEDA86F9D4569043C5BD /* dummy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dummy.h; path = opencv2.framework/Versions/A/Headers/flann/dummy.h; sourceTree = "<group>"; };
 		43E1D816ABCE6FA7332C0F8B305D96DD /* general.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = general.h; path = opencv2.framework/Versions/A/Headers/flann/general.h; sourceTree = "<group>"; };
@@ -69,7 +67,6 @@
 		517616760FDD4EF75C6D01F740D782A6 /* intrin.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = intrin.hpp; path = opencv2.framework/Versions/A/Headers/core/hal/intrin.hpp; sourceTree = "<group>"; };
 		52B9C8A376BE82F3D480A29BC971E0DD /* kdtree_single_index.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = kdtree_single_index.h; path = opencv2.framework/Versions/A/Headers/flann/kdtree_single_index.h; sourceTree = "<group>"; };
 		539760B7BC98D1D2738C6A06C646BDA9 /* matrix.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = matrix.h; path = opencv2.framework/Versions/A/Headers/flann/matrix.h; sourceTree = "<group>"; };
-		56595D6621EB5614DBDCE1E4158402E7 /* Pods-barcode-detection-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-barcode-detection-resources.sh"; sourceTree = "<group>"; };
 		57BF37A1F3E27CB69F779AAD09DF696C /* shape_transformer.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = shape_transformer.hpp; path = opencv2.framework/Versions/A/Headers/shape/shape_transformer.hpp; sourceTree = "<group>"; };
 		5CD1862DCAC70C5F0ADF034A169DAF28 /* detection_based_tracker.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = detection_based_tracker.hpp; path = opencv2.framework/Versions/A/Headers/objdetect/detection_based_tracker.hpp; sourceTree = "<group>"; };
 		5DDD0C65EC71D04D44971E79E65F4D1A /* stitching.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = stitching.hpp; path = opencv2.framework/Versions/A/Headers/stitching.hpp; sourceTree = "<group>"; };
@@ -79,6 +76,8 @@
 		6402E7FB4EDAA4117F587F41B45E7B8A /* global_motion.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = global_motion.hpp; path = opencv2.framework/Versions/A/Headers/videostab/global_motion.hpp; sourceTree = "<group>"; };
 		65704722041A52A9BCAFA39E3FB6A2DD /* directx.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = directx.hpp; path = opencv2.framework/Versions/A/Headers/core/directx.hpp; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		666CFCA30C712B7DAF6A3804A1E370AE /* Pods_opencv_metal_pipeline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_opencv_metal_pipeline.framework; path = "Pods-opencv-metal-pipeline.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		679BF43EADCD45F26BA7528DBA02284F /* Pods-opencv-metal-pipeline-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-opencv-metal-pipeline-umbrella.h"; sourceTree = "<group>"; };
 		67A1DA03A9DE17E6921F67989D42BD71 /* fast_math.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = fast_math.hpp; path = opencv2.framework/Versions/A/Headers/core/fast_math.hpp; sourceTree = "<group>"; };
 		67D0CE5F7D5840B9C7F22B795B0E2861 /* emdL1.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = emdL1.hpp; path = opencv2.framework/Versions/A/Headers/shape/emdL1.hpp; sourceTree = "<group>"; };
 		67FCC27060EF3AA94BB2E8DFE669073D /* linear_index.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = linear_index.h; path = opencv2.framework/Versions/A/Headers/flann/linear_index.h; sourceTree = "<group>"; };
@@ -108,7 +107,6 @@
 		83734CDD1CC7F90DF6CB48D66575C9B2 /* lsh_table.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = lsh_table.h; path = opencv2.framework/Versions/A/Headers/flann/lsh_table.h; sourceTree = "<group>"; };
 		84681A5C66733404DC5E824342810E5E /* log.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = log.hpp; path = opencv2.framework/Versions/A/Headers/videostab/log.hpp; sourceTree = "<group>"; };
 		8788DE21476A7826AA98D7A413EC76C7 /* ptr.inl.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = ptr.inl.hpp; path = opencv2.framework/Versions/A/Headers/core/ptr.inl.hpp; sourceTree = "<group>"; };
-		8AB1C642CB9F718DE8842402D793CC4C /* Pods-barcode-detection-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-barcode-detection-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8C9B4C788D2FFBF5121995FE7434A3A9 /* frame_source.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = frame_source.hpp; path = opencv2.framework/Versions/A/Headers/videostab/frame_source.hpp; sourceTree = "<group>"; };
 		8CB6AA07EFA5F379046B6D82566252E2 /* saving.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = saving.h; path = opencv2.framework/Versions/A/Headers/flann/saving.h; sourceTree = "<group>"; };
 		8D50BC2D8C034914BFFC19902D5F8E5A /* kdtree_index.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = kdtree_index.h; path = opencv2.framework/Versions/A/Headers/flann/kdtree_index.h; sourceTree = "<group>"; };
@@ -116,7 +114,6 @@
 		90201EAD361A9A041BE400231B9010F4 /* opengl.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = opengl.hpp; path = opencv2.framework/Versions/A/Headers/core/opengl.hpp; sourceTree = "<group>"; };
 		90B0E34652994CE41A97E0778DEF5E63 /* cap_ios.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cap_ios.h; path = opencv2.framework/Versions/A/Headers/videoio/cap_ios.h; sourceTree = "<group>"; };
 		92683EA43FD8D81CB8261F1CA68B624B /* videoio_c.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = videoio_c.h; path = opencv2.framework/Versions/A/Headers/videoio/videoio_c.h; sourceTree = "<group>"; };
-		9291FAB739446087DEACF16F30B9E728 /* Pods-barcode-detection.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-barcode-detection.modulemap"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		96EEC5A80E3604E3142A3A39A2275B79 /* eigen.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = eigen.hpp; path = opencv2.framework/Versions/A/Headers/core/eigen.hpp; sourceTree = "<group>"; };
 		978DE9C4A8BACB555E6C028581D5ED3E /* motion_core.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = motion_core.hpp; path = opencv2.framework/Versions/A/Headers/videostab/motion_core.hpp; sourceTree = "<group>"; };
@@ -127,21 +124,21 @@
 		9D098481C8394D1648107E7D063633F4 /* imgcodecs.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = imgcodecs.hpp; path = opencv2.framework/Versions/A/Headers/imgcodecs.hpp; sourceTree = "<group>"; };
 		9EE97C0214328AA40A2237B2C1986DA1 /* ocl_genbase.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = ocl_genbase.hpp; path = opencv2.framework/Versions/A/Headers/core/ocl_genbase.hpp; sourceTree = "<group>"; };
 		9FD9262E6A6DDB19965C85C83729DECD /* saturate.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = saturate.hpp; path = opencv2.framework/Versions/A/Headers/core/saturate.hpp; sourceTree = "<group>"; };
+		A016CB59FB9C26AA11A2B5E360A0657F /* Pods-opencv-metal-pipeline-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-opencv-metal-pipeline-acknowledgements.plist"; sourceTree = "<group>"; };
 		A13F00A6E303DDD423640865A77C4B42 /* utility.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = utility.hpp; path = opencv2.framework/Versions/A/Headers/core/utility.hpp; sourceTree = "<group>"; };
-		A14A28E83D11170A2EF2FF1CC77D9EB3 /* Pods-barcode-detection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-barcode-detection.release.xcconfig"; sourceTree = "<group>"; };
 		A22B8F1D8C7D296445B28905647730B2 /* core.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = core.hpp; path = opencv2.framework/Versions/A/Headers/core.hpp; sourceTree = "<group>"; };
 		A5ADDC653C59B47333A1BC6B993D5CC0 /* calib3d.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = calib3d.hpp; path = opencv2.framework/Versions/A/Headers/calib3d.hpp; sourceTree = "<group>"; };
+		A8777F055C221AEA8E2C7467A1B53BD9 /* Pods-opencv-metal-pipeline-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-opencv-metal-pipeline-frameworks.sh"; sourceTree = "<group>"; };
 		AA31D8E1841C235521FDC049E5332F3C /* timer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = timer.h; path = opencv2.framework/Versions/A/Headers/flann/timer.h; sourceTree = "<group>"; };
 		ABC7C7101AD63B497201DA9C215E0C2F /* cuda.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = cuda.hpp; path = opencv2.framework/Versions/A/Headers/core/cuda.hpp; sourceTree = "<group>"; };
 		B04F51366115D485FEA5E5E1D07E16E4 /* objdetect_c.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = objdetect_c.h; path = opencv2.framework/Versions/A/Headers/objdetect/objdetect_c.h; sourceTree = "<group>"; };
 		B39F660C5C0C6137E1BDECAE01B71F87 /* cvstd.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = cvstd.hpp; path = opencv2.framework/Versions/A/Headers/core/cvstd.hpp; sourceTree = "<group>"; };
 		B6D9C5C17F45E71F7125027E09498ACA /* hal.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = hal.hpp; path = opencv2.framework/Versions/A/Headers/core/hal/hal.hpp; sourceTree = "<group>"; };
 		B928FF2104EC194245CF983171A8FA32 /* imgcodecs.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = imgcodecs.hpp; path = opencv2.framework/Versions/A/Headers/imgcodecs/imgcodecs.hpp; sourceTree = "<group>"; };
-		BAE45561BEEC89158AB7DC6B7868DE19 /* Pods-barcode-detection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-barcode-detection.debug.xcconfig"; sourceTree = "<group>"; };
 		BC58D5E1E846883C573443716019BA86 /* warpers.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = warpers.hpp; path = opencv2.framework/Versions/A/Headers/stitching/detail/warpers.hpp; sourceTree = "<group>"; };
 		BDE74419321486C9353ADC73BBE835B1 /* video.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = video.hpp; path = opencv2.framework/Versions/A/Headers/video/video.hpp; sourceTree = "<group>"; };
+		BF56593AAA527FABB67BA36165B25C90 /* Pods-opencv-metal-pipeline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-opencv-metal-pipeline.debug.xcconfig"; sourceTree = "<group>"; };
 		C164F30558A96D8C1668D29C78C0F242 /* wobble_suppression.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = wobble_suppression.hpp; path = opencv2.framework/Versions/A/Headers/videostab/wobble_suppression.hpp; sourceTree = "<group>"; };
-		C175106B4A18C5079A4823852DC6ED7B /* Pods-barcode-detection-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-barcode-detection-frameworks.sh"; sourceTree = "<group>"; };
 		C327DA4AA6F421B7032087A7DC599BBE /* persistence.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = persistence.hpp; path = opencv2.framework/Versions/A/Headers/core/persistence.hpp; sourceTree = "<group>"; };
 		C43964630A6C0A8BE539AE4037492A39 /* shape_distance.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = shape_distance.hpp; path = opencv2.framework/Versions/A/Headers/shape/shape_distance.hpp; sourceTree = "<group>"; };
 		C576371B36FBF2FD01883E1360CD38A5 /* types.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = types.hpp; path = opencv2.framework/Versions/A/Headers/core/types.hpp; sourceTree = "<group>"; };
@@ -153,10 +150,12 @@
 		CCDC6D0CACFB307FC597E604224CDAF3 /* intrin_cpp.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = intrin_cpp.hpp; path = opencv2.framework/Versions/A/Headers/core/hal/intrin_cpp.hpp; sourceTree = "<group>"; };
 		CF71E317C5B78A49EE80A7433F86B020 /* camera.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = camera.hpp; path = opencv2.framework/Versions/A/Headers/stitching/detail/camera.hpp; sourceTree = "<group>"; };
 		D44F81B9852E13F0ADAFD42D2D3CFFFA /* fast_marching_inl.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = fast_marching_inl.hpp; path = opencv2.framework/Versions/A/Headers/videostab/fast_marching_inl.hpp; sourceTree = "<group>"; };
+		D4AD9073851B85B99B95AA501212CA20 /* Pods-opencv-metal-pipeline-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-opencv-metal-pipeline-resources.sh"; sourceTree = "<group>"; };
+		D77F5B65778E02A5691717BE420AE6C6 /* Pods-opencv-metal-pipeline.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-opencv-metal-pipeline.modulemap"; sourceTree = "<group>"; };
 		D9501C1D12C2B4844BF90910D0D834B9 /* hdf5.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hdf5.h; path = opencv2.framework/Versions/A/Headers/flann/hdf5.h; sourceTree = "<group>"; };
 		DA08450E58C0E373B33647CBE4BE4456 /* objdetect.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = objdetect.hpp; path = opencv2.framework/Versions/A/Headers/objdetect.hpp; sourceTree = "<group>"; };
-		DB0EFAD8A05E8DE870022403796CFF80 /* Pods-barcode-detection-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-barcode-detection-dummy.m"; sourceTree = "<group>"; };
 		DC84523E38D24544506EC0543CCB6A9A /* motion_stabilizing.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = motion_stabilizing.hpp; path = opencv2.framework/Versions/A/Headers/videostab/motion_stabilizing.hpp; sourceTree = "<group>"; };
+		DCDED59B3AB6D258184FD0748114E786 /* Pods-opencv-metal-pipeline-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-opencv-metal-pipeline-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DD4C4C23DD40E9DC585453B755562A6C /* base.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = base.hpp; path = opencv2.framework/Versions/A/Headers/core/base.hpp; sourceTree = "<group>"; };
 		E356C8CBE5851AB5D2BC5312C42A5138 /* stabilizer.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = stabilizer.hpp; path = opencv2.framework/Versions/A/Headers/videostab/stabilizer.hpp; sourceTree = "<group>"; };
 		E43B4099F7A428049179AE49F04EEEF3 /* photo.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = photo.hpp; path = opencv2.framework/Versions/A/Headers/photo.hpp; sourceTree = "<group>"; };
@@ -182,22 +181,31 @@
 		F6FA19719E9ECF09657D947964EFBC6C /* flann_base.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = flann_base.hpp; path = opencv2.framework/Versions/A/Headers/flann/flann_base.hpp; sourceTree = "<group>"; };
 		FAED112D1EC06B69486E0079C55C34E7 /* random.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = random.h; path = opencv2.framework/Versions/A/Headers/flann/random.h; sourceTree = "<group>"; };
 		FBF07A69002B74EFF1D943DC64248A5A /* nn_index.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = nn_index.h; path = opencv2.framework/Versions/A/Headers/flann/nn_index.h; sourceTree = "<group>"; };
+		FCE292BE36353AF3AA92180200EC2C79 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEA66A1E20899C03EDDB65C199AD0B1D /* core.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = core.hpp; path = opencv2.framework/Versions/A/Headers/core/core.hpp; sourceTree = "<group>"; };
 		FF8D023F3506F1DD6A1830B5B41B5FA2 /* kmeans_index.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = kmeans_index.h; path = opencv2.framework/Versions/A/Headers/flann/kmeans_index.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A135FDA70CAFAFC2A28CF23596BFAC27 /* Frameworks */ = {
+		072EFA5B0E5580A5F0483BF2896424CB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BB453ED680DF961AC41083FF9A1544B /* Foundation.framework in Frameworks */,
+				55448F7E7532C00CE557F2E95D7BB452 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00987DC09AABB5891B41A5E310340FF8 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E57C9A0EA987FA5D14EDBDF303628C3E /* Pods-opencv-metal-pipeline */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 		18A6005AA17948B6B35ADDFF6C7273A4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,30 +214,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2730C47ED3B7BBD1757C6F57543CB1C0 /* Pods-barcode-detection */ = {
+		6CB3F1EDA47E4ECC9011118D48375934 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1DF373053A240B2383617C13FEE44455 /* Info.plist */,
-				9291FAB739446087DEACF16F30B9E728 /* Pods-barcode-detection.modulemap */,
-				8AB1C642CB9F718DE8842402D793CC4C /* Pods-barcode-detection-acknowledgements.markdown */,
-				397D5F4DAFAA141F3CC7F2C2097D88AB /* Pods-barcode-detection-acknowledgements.plist */,
-				DB0EFAD8A05E8DE870022403796CFF80 /* Pods-barcode-detection-dummy.m */,
-				C175106B4A18C5079A4823852DC6ED7B /* Pods-barcode-detection-frameworks.sh */,
-				56595D6621EB5614DBDCE1E4158402E7 /* Pods-barcode-detection-resources.sh */,
-				00BFB64A4672D2A707EDA9A738EC94B5 /* Pods-barcode-detection-umbrella.h */,
-				BAE45561BEEC89158AB7DC6B7868DE19 /* Pods-barcode-detection.debug.xcconfig */,
-				A14A28E83D11170A2EF2FF1CC77D9EB3 /* Pods-barcode-detection.release.xcconfig */,
+				666CFCA30C712B7DAF6A3804A1E370AE /* Pods_opencv_metal_pipeline.framework */,
 			);
-			name = "Pods-barcode-detection";
-			path = "Target Support Files/Pods-barcode-detection";
-			sourceTree = "<group>";
-		};
-		3520EB14979531552B11BDD705BFC4E2 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				2730C47ED3B7BBD1757C6F57543CB1C0 /* Pods-barcode-detection */,
-			);
-			name = "Targets Support Files";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -238,8 +228,8 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				EEB1FEDD23632F5456508AD2389D4341 /* Pods */,
-				AEF7B5DD01F9C2A95542B62F8F0E9053 /* Products */,
-				3520EB14979531552B11BDD705BFC4E2 /* Targets Support Files */,
+				6CB3F1EDA47E4ECC9011118D48375934 /* Products */,
+				00987DC09AABB5891B41A5E310340FF8 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -409,14 +399,6 @@
 			path = OpenCV;
 			sourceTree = "<group>";
 		};
-		AEF7B5DD01F9C2A95542B62F8F0E9053 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				415065639C4CD5A257A029F2DD5248A9 /* Pods_barcode_detection.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -433,6 +415,24 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		E57C9A0EA987FA5D14EDBDF303628C3E /* Pods-opencv-metal-pipeline */ = {
+			isa = PBXGroup;
+			children = (
+				FCE292BE36353AF3AA92180200EC2C79 /* Info.plist */,
+				D77F5B65778E02A5691717BE420AE6C6 /* Pods-opencv-metal-pipeline.modulemap */,
+				DCDED59B3AB6D258184FD0748114E786 /* Pods-opencv-metal-pipeline-acknowledgements.markdown */,
+				A016CB59FB9C26AA11A2B5E360A0657F /* Pods-opencv-metal-pipeline-acknowledgements.plist */,
+				1876FBB7DD01C0EC7B749A49958EED51 /* Pods-opencv-metal-pipeline-dummy.m */,
+				A8777F055C221AEA8E2C7467A1B53BD9 /* Pods-opencv-metal-pipeline-frameworks.sh */,
+				D4AD9073851B85B99B95AA501212CA20 /* Pods-opencv-metal-pipeline-resources.sh */,
+				679BF43EADCD45F26BA7528DBA02284F /* Pods-opencv-metal-pipeline-umbrella.h */,
+				BF56593AAA527FABB67BA36165B25C90 /* Pods-opencv-metal-pipeline.debug.xcconfig */,
+				00C449E0C68B8FF54345855CBE170F74 /* Pods-opencv-metal-pipeline.release.xcconfig */,
+			);
+			name = "Pods-opencv-metal-pipeline";
+			path = "Target Support Files/Pods-opencv-metal-pipeline";
+			sourceTree = "<group>";
+		};
 		EEB1FEDD23632F5456508AD2389D4341 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -444,32 +444,32 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		EDAD08519176682ED9500ABA2DF8F5EC /* Headers */ = {
+		29DD8B54C1B2CDD84ADC9E4CD26D3BD2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70E3E4FC2214971438D188848B015E51 /* Pods-barcode-detection-umbrella.h in Headers */,
+				1CE56B1C00310BE3D818368EBD826E2D /* Pods-opencv-metal-pipeline-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7754D441F2AD873A4A20C781C40123AC /* Pods-barcode-detection */ = {
+		33BBFB9A8B5F72D7565E0A57E5DD42A6 /* Pods-opencv-metal-pipeline */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C4C36686F05DEE41EA63A5402EAF947E /* Build configuration list for PBXNativeTarget "Pods-barcode-detection" */;
+			buildConfigurationList = F75743B57E013CAACDFBB2042FEA13B0 /* Build configuration list for PBXNativeTarget "Pods-opencv-metal-pipeline" */;
 			buildPhases = (
-				058ED17397DE9BDE3030CBD4E6F9B343 /* Sources */,
-				A135FDA70CAFAFC2A28CF23596BFAC27 /* Frameworks */,
-				EDAD08519176682ED9500ABA2DF8F5EC /* Headers */,
+				375E3C4F89FDB149EC51C5013AD6C701 /* Sources */,
+				072EFA5B0E5580A5F0483BF2896424CB /* Frameworks */,
+				29DD8B54C1B2CDD84ADC9E4CD26D3BD2 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-barcode-detection";
-			productName = "Pods-barcode-detection";
-			productReference = 415065639C4CD5A257A029F2DD5248A9 /* Pods_barcode_detection.framework */;
+			name = "Pods-opencv-metal-pipeline";
+			productName = "Pods-opencv-metal-pipeline";
+			productReference = 666CFCA30C712B7DAF6A3804A1E370AE /* Pods_opencv_metal_pipeline.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -489,21 +489,21 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = AEF7B5DD01F9C2A95542B62F8F0E9053 /* Products */;
+			productRefGroup = 6CB3F1EDA47E4ECC9011118D48375934 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7754D441F2AD873A4A20C781C40123AC /* Pods-barcode-detection */,
+				33BBFB9A8B5F72D7565E0A57E5DD42A6 /* Pods-opencv-metal-pipeline */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		058ED17397DE9BDE3030CBD4E6F9B343 /* Sources */ = {
+		375E3C4F89FDB149EC51C5013AD6C701 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47C819AAE62848F305A6E682683E72A2 /* Pods-barcode-detection-dummy.m in Sources */,
+				AE2FB56C84160FD25DD9B412EE01507C /* Pods-opencv-metal-pipeline-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +565,38 @@
 			};
 			name = Release;
 		};
+		12E99A7C1AE067EF255112CEF5F1AC0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF56593AAA527FABB67BA36165B25C90 /* Pods-opencv-metal-pipeline.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-opencv-metal-pipeline/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-opencv-metal-pipeline/Pods-opencv-metal-pipeline.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_opencv_metal_pipeline;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		59F0302F2371FCC6B73EF0A418D40734 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -625,9 +657,9 @@
 			};
 			name = Debug;
 		};
-		857465EF1E258E05FA429CED97F1A7D0 /* Debug */ = {
+		6212166DB4CFE0647B877CB4C2C7537E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BAE45561BEEC89158AB7DC6B7868DE19 /* Pods-barcode-detection.debug.xcconfig */;
+			baseConfigurationReference = 00C449E0C68B8FF54345855CBE170F74 /* Pods-opencv-metal-pipeline.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -638,49 +670,17 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-barcode-detection/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-opencv-metal-pipeline/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-barcode-detection/Pods-barcode-detection.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-opencv-metal-pipeline/Pods-opencv-metal-pipeline.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_barcode_detection;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		8B56DC92BFE4817C1F903AAC862BC939 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A14A28E83D11170A2EF2FF1CC77D9EB3 /* Pods-barcode-detection.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-barcode-detection/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-barcode-detection/Pods-barcode-detection.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_barcode_detection;
+				PRODUCT_NAME = Pods_opencv_metal_pipeline;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -702,11 +702,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C4C36686F05DEE41EA63A5402EAF947E /* Build configuration list for PBXNativeTarget "Pods-barcode-detection" */ = {
+		F75743B57E013CAACDFBB2042FEA13B0 /* Build configuration list for PBXNativeTarget "Pods-opencv-metal-pipeline" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				857465EF1E258E05FA429CED97F1A7D0 /* Debug */,
-				8B56DC92BFE4817C1F903AAC862BC939 /* Release */,
+				12E99A7C1AE067EF255112CEF5F1AC0D /* Debug */,
+				6212166DB4CFE0647B877CB4C2C7537E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

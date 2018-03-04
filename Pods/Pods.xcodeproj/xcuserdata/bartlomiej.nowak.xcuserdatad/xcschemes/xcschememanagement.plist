@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-barcode-detection.xcscheme</key>
+		<key>Pods-opencv-metal-pipeline.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

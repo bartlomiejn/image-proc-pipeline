@@ -1,6 +1,6 @@
 //
 //  VideoSource.swift
-//  barcode-detection
+//  opencv-metal-pipeline
 //
 //  Created by Bartłomiej Nowak on 13.02.2018.
 //  Copyright © 2018 Bartłomiej Nowak. All rights reserved.

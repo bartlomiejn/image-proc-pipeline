@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BC423AB8C2AB58D91D6F2D0 /* Pods_opencv_metal_pipeline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64F1EC309DBC6096973FE3F0 /* Pods_opencv_metal_pipeline.framework */; };
 		60181D402033494700CD252A /* AVVideoSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60181D3F2033494700CD252A /* AVVideoSource.swift */; };
 		606DA51520307912001624F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DA51420307912001624F3 /* AppDelegate.swift */; };
 		606DA51720307912001624F3 /* VideoFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DA51620307912001624F3 /* VideoFeedViewController.swift */; };
@@ -20,21 +21,19 @@
 		60CF9A742045DBA50099A2F5 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CF9A722045DBA50099A2F5 /* Metal.framework */; };
 		60CF9A752045DBA50099A2F5 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CF9A732045DBA50099A2F5 /* MetalKit.framework */; };
 		60CF9A772045FF930099A2F5 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 60CF9A762045FF930099A2F5 /* Shaders.metal */; };
-		B25EA8A32B2D88E980ACAD2A /* Pods_barcode_detection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FCF4034B94A1C6413127AD /* Pods_barcode_detection.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		24FCF4034B94A1C6413127AD /* Pods_barcode_detection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_barcode_detection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2FEAF1B96ACC27AA516EB684 /* Pods-barcode-detection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-barcode-detection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-barcode-detection/Pods-barcode-detection.debug.xcconfig"; sourceTree = "<group>"; };
+		315755CAFE3D2EBB817E6B5E /* Pods-opencv-metal-pipeline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opencv-metal-pipeline.release.xcconfig"; path = "Pods/Target Support Files/Pods-opencv-metal-pipeline/Pods-opencv-metal-pipeline.release.xcconfig"; sourceTree = "<group>"; };
 		60181D3F2033494700CD252A /* AVVideoSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVVideoSource.swift; sourceTree = "<group>"; };
-		606DA51120307912001624F3 /* barcode-detection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "barcode-detection.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		606DA51120307912001624F3 /* opencv-metal-pipeline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "opencv-metal-pipeline.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		606DA51420307912001624F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		606DA51620307912001624F3 /* VideoFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFeedViewController.swift; sourceTree = "<group>"; };
 		606DA51920307912001624F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/VideoFeed.storyboard; sourceTree = "<group>"; };
 		606DA51B20307912001624F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		606DA51E20307912001624F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		606DA52020307912001624F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		606DA52920307E6D001624F3 /* barcode-detection-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "barcode-detection-Bridging-Header.h"; sourceTree = "<group>"; };
+		606DA52920307E6D001624F3 /* opencv-metal-pipeline-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "opencv-metal-pipeline-Bridging-Header.h"; sourceTree = "<group>"; };
 		606DA52A20307E6D001624F3 /* ImageProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageProcessor.h; sourceTree = "<group>"; };
 		606DA52B20307E6D001624F3 /* ImageProcessor.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageProcessor.mm; sourceTree = "<group>"; };
 		60CF9A6920433D450099A2F5 /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
@@ -44,7 +43,8 @@
 		60CF9A722045DBA50099A2F5 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		60CF9A732045DBA50099A2F5 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		60CF9A762045FF930099A2F5 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
-		9DBECEC0547F8AF14ED6FE77 /* Pods-barcode-detection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-barcode-detection.release.xcconfig"; path = "Pods/Target Support Files/Pods-barcode-detection/Pods-barcode-detection.release.xcconfig"; sourceTree = "<group>"; };
+		64F1EC309DBC6096973FE3F0 /* Pods_opencv_metal_pipeline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_opencv_metal_pipeline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6632D229C7DB14EA333C00FA /* Pods-opencv-metal-pipeline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opencv-metal-pipeline.debug.xcconfig"; path = "Pods/Target Support Files/Pods-opencv-metal-pipeline/Pods-opencv-metal-pipeline.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +55,7 @@
 				60CF9A742045DBA50099A2F5 /* Metal.framework in Frameworks */,
 				60CF9A752045DBA50099A2F5 /* MetalKit.framework in Frameworks */,
 				60CF9A712045D7D80099A2F5 /* CoreVideo.framework in Frameworks */,
-				B25EA8A32B2D88E980ACAD2A /* Pods_barcode_detection.framework in Frameworks */,
+				3BC423AB8C2AB58D91D6F2D0 /* Pods_opencv_metal_pipeline.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,8 +65,8 @@
 		052EA292F0C40291F70288C4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2FEAF1B96ACC27AA516EB684 /* Pods-barcode-detection.debug.xcconfig */,
-				9DBECEC0547F8AF14ED6FE77 /* Pods-barcode-detection.release.xcconfig */,
+				6632D229C7DB14EA333C00FA /* Pods-opencv-metal-pipeline.debug.xcconfig */,
+				315755CAFE3D2EBB817E6B5E /* Pods-opencv-metal-pipeline.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -82,7 +82,7 @@
 		606DA50820307912001624F3 = {
 			isa = PBXGroup;
 			children = (
-				606DA51320307912001624F3 /* barcode-detection */,
+				606DA51320307912001624F3 /* opencv-metal-pipeline */,
 				606DA51220307912001624F3 /* Products */,
 				052EA292F0C40291F70288C4 /* Pods */,
 				866108CD9C20F5540D807BE9 /* Frameworks */,
@@ -92,12 +92,12 @@
 		606DA51220307912001624F3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				606DA51120307912001624F3 /* barcode-detection.app */,
+				606DA51120307912001624F3 /* opencv-metal-pipeline.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		606DA51320307912001624F3 /* barcode-detection */ = {
+		606DA51320307912001624F3 /* opencv-metal-pipeline */ = {
 			isa = PBXGroup;
 			children = (
 				60181D3B2033482F00CD252A /* Video Source */,
@@ -106,13 +106,13 @@
 				60CF9A6820433D330099A2F5 /* View */,
 				606DA51420307912001624F3 /* AppDelegate.swift */,
 				606DA51620307912001624F3 /* VideoFeedViewController.swift */,
-				606DA52920307E6D001624F3 /* barcode-detection-Bridging-Header.h */,
+				606DA52920307E6D001624F3 /* opencv-metal-pipeline-Bridging-Header.h */,
 				606DA51820307912001624F3 /* VideoFeed.storyboard */,
 				606DA51B20307912001624F3 /* Assets.xcassets */,
 				606DA51D20307912001624F3 /* LaunchScreen.storyboard */,
 				606DA52020307912001624F3 /* Info.plist */,
 			);
-			path = "barcode-detection";
+			path = "opencv-metal-pipeline";
 			sourceTree = "<group>";
 		};
 		606DA52620307E0B001624F3 /* Image Processing */ = {
@@ -148,7 +148,7 @@
 				60CF9A722045DBA50099A2F5 /* Metal.framework */,
 				60CF9A732045DBA50099A2F5 /* MetalKit.framework */,
 				60CF9A702045D7D70099A2F5 /* CoreVideo.framework */,
-				24FCF4034B94A1C6413127AD /* Pods_barcode_detection.framework */,
+				64F1EC309DBC6096973FE3F0 /* Pods_opencv_metal_pipeline.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -156,9 +156,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		606DA51020307912001624F3 /* barcode-detection */ = {
+		606DA51020307912001624F3 /* opencv-metal-pipeline */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 606DA52320307912001624F3 /* Build configuration list for PBXNativeTarget "barcode-detection" */;
+			buildConfigurationList = 606DA52320307912001624F3 /* Build configuration list for PBXNativeTarget "opencv-metal-pipeline" */;
 			buildPhases = (
 				7988910FF243937D1506D261 /* [CP] Check Pods Manifest.lock */,
 				606DA50D20307912001624F3 /* Sources */,
@@ -171,9 +171,9 @@
 			);
 			dependencies = (
 			);
-			name = "barcode-detection";
+			name = "opencv-metal-pipeline";
 			productName = "barcode-detection";
-			productReference = 606DA51120307912001624F3 /* barcode-detection.app */;
+			productReference = 606DA51120307912001624F3 /* opencv-metal-pipeline.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -193,7 +193,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 606DA50C20307912001624F3 /* Build configuration list for PBXProject "barcode-detection" */;
+			buildConfigurationList = 606DA50C20307912001624F3 /* Build configuration list for PBXProject "opencv-metal-pipeline" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -206,7 +206,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				606DA51020307912001624F3 /* barcode-detection */,
+				606DA51020307912001624F3 /* opencv-metal-pipeline */,
 			);
 		};
 /* End PBXProject section */
@@ -237,7 +237,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-barcode-detection/Pods-barcode-detection-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-opencv-metal-pipeline/Pods-opencv-metal-pipeline-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7988910FF243937D1506D261 /* [CP] Check Pods Manifest.lock */ = {
@@ -251,7 +251,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-barcode-detection-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-opencv-metal-pipeline-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -270,7 +270,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-barcode-detection/Pods-barcode-detection-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-opencv-metal-pipeline/Pods-opencv-metal-pipeline-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -421,17 +421,17 @@
 		};
 		606DA52420307912001624F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2FEAF1B96ACC27AA516EB684 /* Pods-barcode-detection.debug.xcconfig */;
+			baseConfigurationReference = 6632D229C7DB14EA333C00FA /* Pods-opencv-metal-pipeline.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6NDM93MJT;
-				INFOPLIST_FILE = "barcode-detection/Info.plist";
+				INFOPLIST_FILE = "opencv-metal-pipeline/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.bartlomiejnowak.barcode-detection";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.bartlomiejnowak.opencv-metal-pipeline";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "barcode-detection/barcode-detection-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "opencv-metal-pipeline/opencv-metal-pipeline-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -440,17 +440,17 @@
 		};
 		606DA52520307912001624F3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9DBECEC0547F8AF14ED6FE77 /* Pods-barcode-detection.release.xcconfig */;
+			baseConfigurationReference = 315755CAFE3D2EBB817E6B5E /* Pods-opencv-metal-pipeline.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6NDM93MJT;
-				INFOPLIST_FILE = "barcode-detection/Info.plist";
+				INFOPLIST_FILE = "opencv-metal-pipeline/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.bartlomiejnowak.barcode-detection";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.bartlomiejnowak.opencv-metal-pipeline";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "barcode-detection/barcode-detection-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "opencv-metal-pipeline/opencv-metal-pipeline-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -459,7 +459,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		606DA50C20307912001624F3 /* Build configuration list for PBXProject "barcode-detection" */ = {
+		606DA50C20307912001624F3 /* Build configuration list for PBXProject "opencv-metal-pipeline" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				606DA52120307912001624F3 /* Debug */,
@@ -468,7 +468,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		606DA52320307912001624F3 /* Build configuration list for PBXNativeTarget "barcode-detection" */ = {
+		606DA52320307912001624F3 /* Build configuration list for PBXNativeTarget "opencv-metal-pipeline" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				606DA52420307912001624F3 /* Debug */,
