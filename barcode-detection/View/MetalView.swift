@@ -12,7 +12,10 @@ import AVFoundation
 
 final class MetalView: UIView {
     
+    struct DefaultLibrarySetupFailure: Error {}
     struct PipelineStateSetupFailure: Error {}
+    struct TextureSizeBufferSetupFailure: Error {}
+    struct TextureSizeBufferContentsUpdateFailure: Error {}
     
     private enum Constant {
         enum Shader {
@@ -30,16 +33,19 @@ final class MetalView: UIView {
     private var renderPipelineState: MTLRenderPipelineState!
     private var currentTexture: MTLTexture?
     
+    private var textureSizeBuffer: MTLBuffer?
+    
     private let drawSemaphore = DispatchSemaphore(value: 1)
     
-    init(device: MTLDevice) {
+    init(device: MTLDevice) throws {
         metalView = MTKView(frame: .zero, device: device)
         
         self.device = device
         
         super.init(frame: .zero)
         
-        setupRenderPipelineState()
+        try setupTextureSizeBuffer()
+        try setupRenderPipelineState()
         setupVideoView()
     }
     
@@ -48,12 +54,36 @@ final class MetalView: UIView {
     }
     
     func set(_ texture: MTLTexture) {
-        currentTexture = texture
+        do {
+            currentTexture = texture
+            try updateTextureSizeBuffer()
+        } catch {
+            handle(error)
+        }
     }
     
-    private func setupRenderPipelineState() {
+    private func setupTextureSizeBuffer() throws {
+        guard
+            let buffer = device.makeBuffer(length: MemoryLayout<Float32>.size * 2, options: .cpuCacheModeWriteCombined)
+        else {
+            throw TextureSizeBufferSetupFailure()
+        }
+        
+        self.textureSizeBuffer = buffer
+    }
+    
+    private func updateTextureSizeBuffer() throws {
+        guard let textureSizeBuffer = textureSizeBuffer, let currentTexture = currentTexture else {
+            throw TextureSizeBufferContentsUpdateFailure()
+        }
+        
+        textureSizeBuffer.contents().storeBytes(of: Float32(currentTexture.width), as: Float32.self)
+        textureSizeBuffer.contents().storeBytes(of: Float32(currentTexture.height), toByteOffset: MemoryLayout<Float32>.size, as: Float32.self)
+    }
+    
+    private func setupRenderPipelineState() throws {
         guard let library = device.makeDefaultLibrary() else {
-            return
+            throw DefaultLibrarySetupFailure()
         }
         
         let pipelineDescriptor = MTLRenderPipelineDescriptor()
@@ -101,10 +131,12 @@ extension MetalView: MTKViewDelegate {
     func draw(in view: MTKView) {
         drawSemaphore.wait()
         
-        guard let currentTexture = currentTexture,
-            let commandBuffer = device.makeCommandQueue()?.makeCommandBuffer() else {
-                drawSemaphore.signal()
-                return
+        guard
+            let currentTexture = currentTexture,
+            let commandBuffer = device.makeCommandQueue()?.makeCommandBuffer()
+        else {
+            drawSemaphore.signal()
+            return
         }
         
         render(texture: currentTexture, withCommandBuffer: commandBuffer, device: device)
@@ -115,7 +147,8 @@ extension MetalView: MTKViewDelegate {
             let currentRenderPassDescriptor = metalView.currentRenderPassDescriptor,
             let currentDrawable = metalView.currentDrawable,
             let renderPipelineState = renderPipelineState,
-            let encoder = commandBuffer.makeRenderCommandEncoder(descriptor: currentRenderPassDescriptor)
+            let encoder = commandBuffer.makeRenderCommandEncoder(descriptor: currentRenderPassDescriptor),
+            let textureSizeBuffer = textureSizeBuffer
         else {
             drawSemaphore.signal()
             return
@@ -123,6 +156,7 @@ extension MetalView: MTKViewDelegate {
         
         encoder.pushDebugGroup(Constant.Debug.description)
         
+        encoder.setFragmentBuffer(textureSizeBuffer, offset: 0, index: 0)
         encoder.setRenderPipelineState(renderPipelineState)
         encoder.setFragmentTexture(texture, index: 0)
         encoder.drawPrimitives(type: .triangleStrip, vertexStart: 0, vertexCount: 4)
@@ -130,7 +164,7 @@ extension MetalView: MTKViewDelegate {
         encoder.popDebugGroup()
         
         encoder.endEncoding()
-        
+
         commandBuffer.addScheduledHandler { [weak self] buffer in
             self?.drawSemaphore.signal()
         }

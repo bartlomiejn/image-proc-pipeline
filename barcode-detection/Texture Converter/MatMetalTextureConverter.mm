@@ -37,29 +37,29 @@ using namespace cv;
     int imageCols = image.cols;
     int imageRows = image.rows;
     
-    Float32 *convertedRawImage = (Float32*)calloc(imageRows * imageCols * 4, sizeof(Float32));
+    UInt32 *convertedRawImage = (UInt32*)calloc(imageRows * image.step * 4, sizeof(UInt32));
     
-    int bytesPerPixel = sizeof(Float32);
-    int bytesPerRow = bytesPerPixel * imageCols;
+    int bytesPerPixel = sizeof(UInt32);
+    int bytesPerRow = bytesPerPixel * image.step;
     
-    Float32 r, g, b, a;
+    UInt32 b, g, r, a;
     
     for (int currRow = 0; currRow < imageRows; currRow++) {
         
         int currRowOffset = (int)image.step.buf[0] * currRow;
         int convertedRowOffset = bytesPerRow * currRow;
         
-        Float32* currRowPtr = (Float32*)(image.data + currRowOffset);
+        UInt32* currRowPtr = (UInt32*)(image.data + currRowOffset);
         
         for (int currCol = 0; currCol < imageCols; currCol++) {
-            r = (Float32)(currRowPtr[4 * currCol]);
-            g = (Float32)(currRowPtr[4 * currCol + 1]);
-            b = (Float32)(currRowPtr[4 * currCol + 2]);
-            a = (Float32)(currRowPtr[4 * currCol + 3]);
+            b = (UInt32)(currRowPtr[4 * currCol]);
+            g = (UInt32)(currRowPtr[4 * currCol + 1]);
+            r = (UInt32)(currRowPtr[4 * currCol + 2]);
+            a = (UInt32)(currRowPtr[4 * currCol + 3]);
             
-            convertedRawImage[convertedRowOffset + (4 * currCol)] = r;
+            convertedRawImage[convertedRowOffset + (4 * currCol)] = b;
             convertedRawImage[convertedRowOffset + (4 * currCol + 1)] = g;
-            convertedRawImage[convertedRowOffset + (4 * currCol + 2)] = b;
+            convertedRawImage[convertedRowOffset + (4 * currCol + 2)] = r;
             convertedRawImage[convertedRowOffset + (4 * currCol + 3)] = a;
         }
     }
