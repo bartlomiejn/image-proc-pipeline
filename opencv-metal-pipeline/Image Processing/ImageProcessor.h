@@ -6,7 +6,6 @@
 //  Copyright © 2018 Bartłomiej Nowak. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 

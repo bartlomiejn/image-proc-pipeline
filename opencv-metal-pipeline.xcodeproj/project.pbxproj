@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3BC423AB8C2AB58D91D6F2D0 /* Pods_opencv_metal_pipeline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64F1EC309DBC6096973FE3F0 /* Pods_opencv_metal_pipeline.framework */; };
 		60181D402033494700CD252A /* AVVideoSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60181D3F2033494700CD252A /* AVVideoSource.swift */; };
+		604E345C204C695E007D4B52 /* ImageMatConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 604E345B204C695E007D4B52 /* ImageMatConverter.mm */; };
+		604E3461204C6A58007D4B52 /* TomatoDetector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 604E3460204C6A58007D4B52 /* TomatoDetector.mm */; };
 		606DA51520307912001624F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DA51420307912001624F3 /* AppDelegate.swift */; };
 		606DA51720307912001624F3 /* VideoFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606DA51620307912001624F3 /* VideoFeedViewController.swift */; };
 		606DA51A20307912001624F3 /* VideoFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 606DA51820307912001624F3 /* VideoFeed.storyboard */; };
@@ -26,6 +28,10 @@
 /* Begin PBXFileReference section */
 		315755CAFE3D2EBB817E6B5E /* Pods-opencv-metal-pipeline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opencv-metal-pipeline.release.xcconfig"; path = "Pods/Target Support Files/Pods-opencv-metal-pipeline/Pods-opencv-metal-pipeline.release.xcconfig"; sourceTree = "<group>"; };
 		60181D3F2033494700CD252A /* AVVideoSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVVideoSource.swift; sourceTree = "<group>"; };
+		604E345A204C695E007D4B52 /* ImageMatConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageMatConverter.h; sourceTree = "<group>"; };
+		604E345B204C695E007D4B52 /* ImageMatConverter.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageMatConverter.mm; sourceTree = "<group>"; };
+		604E345F204C6A58007D4B52 /* TomatoDetector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TomatoDetector.h; sourceTree = "<group>"; };
+		604E3460204C6A58007D4B52 /* TomatoDetector.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TomatoDetector.mm; sourceTree = "<group>"; };
 		606DA51120307912001624F3 /* opencv-metal-pipeline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "opencv-metal-pipeline.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		606DA51420307912001624F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		606DA51620307912001624F3 /* VideoFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFeedViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +85,15 @@
 			path = "Video Source";
 			sourceTree = "<group>";
 		};
+		604E345E204C69D4007D4B52 /* Auxiliary */ = {
+			isa = PBXGroup;
+			children = (
+				604E345A204C695E007D4B52 /* ImageMatConverter.h */,
+				604E345B204C695E007D4B52 /* ImageMatConverter.mm */,
+			);
+			path = Auxiliary;
+			sourceTree = "<group>";
+		};
 		606DA50820307912001624F3 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +115,7 @@
 		606DA51320307912001624F3 /* opencv-metal-pipeline */ = {
 			isa = PBXGroup;
 			children = (
+				604E345E204C69D4007D4B52 /* Auxiliary */,
 				60181D3B2033482F00CD252A /* Video Source */,
 				606DA52620307E0B001624F3 /* Image Processing */,
 				60CF9A6B20433DC50099A2F5 /* Texture Converter */,
@@ -120,6 +136,8 @@
 			children = (
 				606DA52A20307E6D001624F3 /* ImageProcessor.h */,
 				606DA52B20307E6D001624F3 /* ImageProcessor.mm */,
+				604E345F204C6A58007D4B52 /* TomatoDetector.h */,
+				604E3460204C6A58007D4B52 /* TomatoDetector.mm */,
 			);
 			path = "Image Processing";
 			sourceTree = "<group>";
@@ -127,8 +145,8 @@
 		60CF9A6820433D330099A2F5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				60CF9A762045FF930099A2F5 /* Shaders.metal */,
 				60CF9A6920433D450099A2F5 /* MetalView.swift */,
+				60CF9A762045FF930099A2F5 /* Shaders.metal */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -283,10 +301,12 @@
 				60181D402033494700CD252A /* AVVideoSource.swift in Sources */,
 				60CF9A772045FF930099A2F5 /* Shaders.metal in Sources */,
 				60CF9A6A20433D450099A2F5 /* MetalView.swift in Sources */,
+				604E345C204C695E007D4B52 /* ImageMatConverter.mm in Sources */,
 				606DA52C20307E6D001624F3 /* ImageProcessor.mm in Sources */,
 				60CF9A6D20433DF20099A2F5 /* MatMetalTextureConverter.mm in Sources */,
 				606DA51720307912001624F3 /* VideoFeedViewController.swift in Sources */,
 				606DA51520307912001624F3 /* AppDelegate.swift in Sources */,
+				604E3461204C6A58007D4B52 /* TomatoDetector.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
