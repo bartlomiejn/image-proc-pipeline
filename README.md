@@ -1,8 +1,6 @@
 # opencv-metal-pipeline
 
-WIP
-
-- Gets camera output through `AVFoundation`
-- Converts camera output to input `cv::Mat` for processing
-- Converts processed `cv::Mat` to `MTLTexture`
-- Renders processed texture using a simple Metal pipeline in real time
+- Retrieval of camera output through `AVFoundation`
+- Convertion of camera output to input `cv::Mat` for processing
+- Convertion of processed `cv::Mat` to `MTLTexture`
+- Rendering of processed texture using a simple Metal pipeline in real time
